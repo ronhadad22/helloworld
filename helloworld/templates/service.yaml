@@ -10,6 +10,7 @@ items:
         ingress.kubernetes.io/force-ssl-redirect: false
         kubernetes.io/ingress.class: {{ .Values.helloworld.service.ingressClass }}
     labels:
+      test: "test"
       expose: "true"
       app: {{ template "fullname" . }}
       chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
